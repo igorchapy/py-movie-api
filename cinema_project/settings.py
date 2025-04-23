@@ -1,15 +1,15 @@
 import os
 from pathlib import Path
 
-# Базовая директория проекта
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Безопасность
+
 SECRET_KEY = 'your-secret-key'
 DEBUG = True
 ALLOWED_HOSTS = []
 
-# Приложения
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -18,10 +18,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Сторонние приложения
+
     'rest_framework',
 
-    # Ваше приложение
+
     'cinema',
 ]
 
@@ -55,7 +55,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'cinema_project.wsgi.application'
 
-# База данных
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -63,21 +63,21 @@ DATABASES = {
     }
 }
 
-# Язык и часовой пояс
+
 LANGUAGE_CODE = 'ru-ru'
 TIME_ZONE = 'Europe/Moscow'
 USE_I18N = True
 USE_TZ = True
 
-# Статические файлы
+
 STATIC_URL = 'static/'
 
-# Настройки по умолчанию для REST framework
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ]
 }
 
-# Дефолтное авто поле
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
